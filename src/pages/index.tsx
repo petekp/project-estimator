@@ -90,7 +90,7 @@ const Index = () => {
             ))}
             <VStack alignItems="stretch" w="100%">
               <Box>
-                <Text fontWeight="bold">Padding Percentage</Text>
+                <Text fontWeight="bold">Padding %</Text>
                 <Slider
                   defaultValue={20}
                   min={0}

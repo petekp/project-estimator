@@ -37,7 +37,7 @@ const InnerEstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
           alignItems="center"
         >
           <Text fontFamily="mono" fontSize="lg" mr={2} pr={4}>
-            Estimate
+            Work weeks required
           </Text>
           <Text fontSize="2xl" fontWeight="bold">
             {estimate}

@@ -1,4 +1,4 @@
-import { Phase, PhaseOption } from "./types";
+import { Phase } from "./types";
 
 export const sizing: Phase[] = [
   {
@@ -72,7 +72,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Implementation Reviews, Support,  Housekeeping",
+    phase: "Implementation Support + Housekeeping",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },

@@ -12,8 +12,8 @@ export const calculateTotalEstimate = ({
 
   totalDays += Math.round((totalDays * paddingPercentage) / 100);
 
-  const weeks = Math.floor(totalDays / 7);
-  const days = totalDays % 7;
+  const weeks = Math.floor(totalDays / 5);
+  const days = totalDays % 5;
 
   const weekStr = weeks === 1 ? "1 week" : `${weeks} weeks`;
   const dayStr = days === 1 ? "1 day" : `${days} days`;
