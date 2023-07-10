@@ -12,7 +12,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Define",
+    phase: "Requirements",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },
@@ -22,7 +22,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Ideate",
+    phase: "Ideation",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 2 },
@@ -32,7 +32,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Xfn Design Reviews",
+    phase: "Xfn design reviews",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },
@@ -42,7 +42,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Prototype",
+    phase: "Prototyping",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 2 },
@@ -52,7 +52,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "User Test",
+    phase: "User testing",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },
@@ -62,7 +62,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Handoff",
+    phase: "Deliverables + documentation",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },
@@ -72,7 +72,7 @@ export const sizing: Phase[] = [
     ],
   },
   {
-    phase: "Implementation Support + Housekeeping",
+    phase: "Implementation support + housekeeping",
     options: [
       { size: "XS", days: 1 },
       { size: "S", days: 1 },

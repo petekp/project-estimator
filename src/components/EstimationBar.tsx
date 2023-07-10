@@ -4,14 +4,13 @@ import useIntersection from "../hooks/useIntersection";
 
 type EstimationBarProps = {
   estimate: string;
-  forwardedRef?: React.Ref<HTMLDivElement>;
 };
 
-const InnerEstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
-  ({ estimate }, forwardedRef) => {
-    const ref = useRef<HTMLDivElement | null>(null);
-    const [isIntersecting] = useIntersection(ref, 1);
-
+const EstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
+  ({ estimate }, ref) => {
+    const innerRef = useRef<HTMLDivElement | null>(null);
+    const combinedRef = (ref || innerRef) as React.RefObject<HTMLDivElement>;
+    const [isIntersecting] = useIntersection(combinedRef, 1);
     const [stickyBottom, setStickyBottom] = useState(0);
 
     useEffect(() => {
@@ -20,7 +19,7 @@ const InnerEstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
 
     return (
       <Box
-        ref={forwardedRef}
+        ref={combinedRef}
         position="sticky"
         bottom={stickyBottom}
         bg="rgba(255, 255, 255, 0.58)"
@@ -45,14 +44,6 @@ const InnerEstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
         </Container>
       </Box>
     );
-  }
-);
-
-InnerEstimationBar.displayName = "InnerEstimationBar";
-
-const EstimationBar = forwardRef<HTMLDivElement, EstimationBarProps>(
-  (props, ref) => {
-    return <InnerEstimationBar {...props} forwardedRef={ref} />;
   }
 );
 
